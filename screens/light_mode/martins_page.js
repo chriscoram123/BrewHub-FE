@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, Image, Animated, ImageBackground, Button } from 'react-native';
 
-export default function BaseLiquoresPage() {
+export default function MartinsPage() {
     return (
         <View>
-            <Text> Base Liquores Page </Text>
+            <Text> Martins Page </Text>
         </View>
     )
 }

@@ -1,14 +1,36 @@
 import { StyleSheet, Text, View, Image, Animated, ImageBackground, Button, ScrollView } from 'react-native';
+import { useState } from 'react';
+import Hamburger from 'hamburger-react'
 
 export default function LiquoresPage({ navigation: { navigate } }) {
+    
+    // UseState for hamburger menu
+    // const [isOpen, setOpen] = useState(false)
+
     return (
         <View>
             <View style={styles.headerCon}>
+
+                {/* logo header container */}
+                <View style={styles.logoImgCon}> 
+                    <Image 
+                        // source={require('../../assets/icon.png')}
+                        // style={styles.logoImage}
+                        // resizeMode='center'
+                    />
+                </View>
+
+                {/* Header Text */}
                 <Text> BrewHub </Text>
+
+                {/* Hamburger Menu Icon
+                <View style={styles.menuCon}>
+                    <Hamburger toggled={isOpen} toggle={setOpen} />
+                </View> */}
             </View>
 
             <View style={styles.scrollViewCon}>
-                <ScrollView horizontal={true}>
+                <ScrollView horizontal={true} style={{flex:1, paddingVertical: 70,}}>
 
                     {/* Card One */}
                     <View style={styles.cardConOne}>
@@ -21,7 +43,11 @@ export default function LiquoresPage({ navigation: { navigate } }) {
 
                     {/* Card Two */}
                     <View style={styles.cardConTwo}>
-                        
+                        <Image 
+                            source={require('../../assets/icon.png')}
+                            style={styles.iconImage}
+                            resizeMode='center'
+                        />
                     </View>
 
                     {/* Card Three */}
@@ -62,7 +88,15 @@ const styles = StyleSheet.create({
         paddingVertical: 100,
         justifyContent: "center",
     },
+    menuCon: {
+
+    },
     iconImage: {
         maxWidth: 100,
-    }
+    },
+    logoImgCon: {
+        // flexDirection: "row",
+        // flex:1,
+        // maxHeight: 100,
+    },
 });

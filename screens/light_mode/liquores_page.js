@@ -29,36 +29,57 @@ export default function LiquoresPage({ navigation: { navigate } }) {
                 </View> */}
             </View>
 
+
+
             <View style={styles.scrollViewCon}>
-                <ScrollView horizontal={true} style={{flex:1, paddingVertical: 70,}}>
-
-                    {/* Card One */}
-                    <View style={styles.cardConOne}>
-                        <Image 
-                            source={require('../../assets/icon.png')}
-                            style={styles.iconImage}
-                            resizeMode='center'
-                        />
-                    </View>
-
-                    {/* Card Two */}
-                    <View style={styles.cardConTwo}>
-                        <Image 
-                            source={require('../../assets/icon.png')}
-                            style={styles.iconImage}
-                            resizeMode='center'
-                        />
-                    </View>
-
-                    {/* Card Three */}
-                    {/* <View style={styles.cardConThree}>
-                        <Image 
-                            source={require('')}
-                            style={styles.iconImage}
-                            // resizeMode=''
-                        />
-                    </View> */}
+                <ScrollView horizontal={true} style={{ flex: 1, paddingVertical: 100,}}>
                     
+                    <View style={styles.iconCon}>
+
+                        {/* Card One */}
+                        <View style={styles.cardConOne}>
+                            <Image 
+                                source={require('../../assets/icon.png')}
+                                style={styles.iconImage}
+                                // resizeMode='center'
+                            />
+                        </View>
+
+                        {/* Card Two */}
+                        <View style={styles.cardConTwo}>
+                            {/* <Image 
+                                source={require('../../assets/icon.png')}
+                                style={styles.iconImage}
+                                resizeMode='center'
+                            /> */}
+                        </View>
+                    </View>
+                    
+                </ScrollView>
+            </View>
+
+
+            <View style={styles.articleViewCon}>
+                <ScrollView vertical={true}>
+
+                    <View style={styles.articleConOne}>
+                        <ImageBackground  style={styles.imageBackground} source={require('../../assets/icon.png')}>
+
+                            <View style={styles.articleTextCon}>
+                                <Text> Hello World </Text>
+                            </View>
+                        </ImageBackground>
+                    </View>
+
+
+                    <View style={styles.articleConOne}>
+                        <ImageBackground  style={styles.imageBackground} source={require('../../assets/icon.png')}>
+
+                            <View style={styles.articleTextCon}>
+                                <Text> Hello World </Text>
+                            </View>
+                        </ImageBackground>
+                    </View>
                 </ScrollView>
             </View>
 
@@ -79,14 +100,17 @@ const styles = StyleSheet.create({
     },
     scrollViewCon: {
         backgroundColor: "purple",
-        paddingVertical: 20,
+        paddingVertical: 80,
+    },
+    articleViewCon: {
+        marginVertical: 20,
     },
     cardConOne: {
-        maxHeight: 100,
-        maxWidth: 50,
-        paddingHorizontal: 100,
-        paddingVertical: 100,
+        // maxHeight: 100,
+        // maxWidth: 50,
+        // paddingHorizontal: 100,
         justifyContent: "center",
+        // flex: 1,
     },
     menuCon: {
 
@@ -98,5 +122,34 @@ const styles = StyleSheet.create({
         // flexDirection: "row",
         // flex:1,
         // maxHeight: 100,
+    },
+
+    imageBackground: {
+        marginVertical: 50,
+    },
+    articleConOne: {
+        marginHorizontal: 20,
+    },
+    // articleConOne: {
+    //     backgroundColor: "blue",
+    //     // justifyContent: "center",
+    //     marginVertical: 100,
+    //     marginHorizontal: 30,
+    // },
+    // articleImgCon: {
+    //     backgroundColor: "red",
+    //     paddingVertical: 10,
+    //     marginVertical: 100,
+    //     justifyContent: "center",
+    //     flexDirection: "row",
+    // },
+    // articleImage: {
+    //     maxHeight: 100,
+    //     maxWidth: 100,
+    // },
+    articleTextCon: {
+        backgroundColor: "red",
+        paddingVertical: 100,
+        marginTop: 100,
     },
 });

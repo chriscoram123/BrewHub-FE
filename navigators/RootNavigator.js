@@ -1,8 +1,6 @@
 import * as React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-// import App from "../App"
-
 // Light Mode Screens
 import LiquoresPage from "../screens/light_mode/liquores_page"
 import BaseLiquoresPage from "../screens/light_mode/base_liquores_page"
@@ -21,7 +19,6 @@ const Stack = createNativeStackNavigator();
 const RootNavigator = () => {
     return (
         <Stack.Navigator initialRouteName="Liquores">
-            {/* <Stack.Screen name="App" component={App} /> */}
             <Stack.Screen name="Liquores" component={LiquoresPage} />
             <Stack.Screen name="BaseLiquores" component={BaseLiquoresPage} />
             <Stack.Screen name="Martins" component={MartinsPage} />

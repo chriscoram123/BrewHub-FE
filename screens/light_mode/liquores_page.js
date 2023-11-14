@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, Animated, ImageBackground, Button, ScrollView, SafeAreaView } from 'react-native';
 import { useState } from 'react';
+import { SvgUri } from 'react-native-svg';
 
 export default function LiquoresPage({ navigation: { navigate } }) {
     
@@ -62,7 +63,7 @@ export default function LiquoresPage({ navigation: { navigate } }) {
                 <ScrollView vertical={true}>
 
                     <View style={styles.articleConOne}>
-                        <ImageBackground  style={styles.imageBackground} source={require('../../assets/icon.png')}>
+                        <ImageBackground  style={styles.imageBackground} source={require('../../assets/drinks-2578446_1920.jpg')}>
                             
                             {/* Article Container */}
                             <View style={styles.articleTextCon}>
@@ -70,10 +71,15 @@ export default function LiquoresPage({ navigation: { navigate } }) {
                                 <View style={styles.articleHeaderCon}>
                                     {/* Profile Icon */}
                                     <View style={styles.articleProfileCon}>
+                                        {/* <SvgUri
+                                            width="100%"
+                                            height="100%"
+                                            source={require('../../assets/profile_icon.svg')}
+                                        /> */}
                                         <Image 
-                                            source={require('../../assets/icon.png')}
-                                            style={styles.profileImage}
-                                            // resizeMode='center'
+                                            source={require('../../assets/pexels-jeandaniel-francoeur-1182238 1.png')}
+                                            style={styles.iconImage}
+                                            resizeMode='center'
                                         />
                                     </View>
                                     {/* Article Info */}
@@ -109,7 +115,7 @@ export default function LiquoresPage({ navigation: { navigate } }) {
 
 
                     <View style={styles.articleConOne}>
-                    <ImageBackground  style={styles.imageBackground} source={require('../../assets/icon.png')}>
+                    <ImageBackground  style={styles.imageBackground} source={require('../../assets/wines-1761613_1920.jpg')}>
                             
                             {/* Article Container */}
                             <View style={styles.articleTextCon}>
@@ -120,7 +126,7 @@ export default function LiquoresPage({ navigation: { navigate } }) {
                                         <Image 
                                             source={require('../../assets/icon.png')}
                                             style={styles.profileImage}
-                                            // resizeMode='center'
+                                            resizeMode='center'
                                         />
                                     </View>
                                     {/* Article Info */}
@@ -283,7 +289,7 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30,
         paddingVertical: 30,
-        marginTop: 100,
+        marginTop: "50%",
         justifyContent: "space-evenly",
         flexDirection: "column",
     },

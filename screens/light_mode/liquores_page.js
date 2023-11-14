@@ -32,14 +32,14 @@ export default function LiquoresPage({ navigation: { navigate } }) {
 
 
             <View style={styles.scrollViewCon}>
-                <ScrollView horizontal={true} style={{ flex: 1, paddingVertical: 30,}}>
+                <ScrollView horizontal={true}>
                     
                     <View style={styles.iconCon}>
 
                         {/* Card One */}
                         <View style={styles.cardConOne}>
                             <Image 
-                                source={require('../../assets/icon.png')}
+                                source={require('../../assets/beer_icon.png')}
                                 style={styles.iconImage}
                                 // resizeMode='center'
                             />
@@ -58,6 +58,8 @@ export default function LiquoresPage({ navigation: { navigate } }) {
                 </ScrollView>
             </View>
 
+            
+            {/* Article Containers */}
             <SafeAreaView style={styles.container}>
             <View style={styles.articleViewCon}>
                 <ScrollView vertical={true}>
@@ -189,18 +191,19 @@ const styles = StyleSheet.create({
         backgroundColor: "red",
     },
     scrollViewCon: {
-        backgroundColor: "purple",
-        paddingVertical: 80,
+        // backgroundColor: "purple",
+        paddingVertical: "5%",
     },
     articleViewCon: {
         maxHeight: "90%",
     },
     iconCon: {
-        // paddingVertical:20,
+        paddingHorizontal: "5%",
         backgroundColor: "green",
+        marginLeft: "10%",
     },
     cardConOne: {
-        maxHeight: 100,
+        maxHeight: "100%",
         // maxWidth: 50,
         paddingHorizontal: 40,
         // justifyContent: "center",

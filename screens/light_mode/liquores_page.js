@@ -67,7 +67,26 @@ export default function LiquoresPage({ navigation: { navigate } }) {
                         <ImageBackground  style={styles.imageBackground} source={require('../../assets/icon.png')}>
 
                             <View style={styles.articleTextCon}>
-                                <Text> Hello World </Text>
+
+                                <View style={styles.articleHeaderCon}>
+                                    <Text> Hello World </Text>
+                                </View>
+
+                                <View style={styles.articleTitleCon}>
+                                    <Text> Hello World </Text>
+                                </View>
+
+                                <View style={styles.articleParagraphCon}>
+                                    <Text> Hello World </Text>
+                                </View>
+
+                                <View style={styles.articleReviewCon}>
+                                    <Text> Hello World </Text>
+                                </View>
+
+                                <View style={styles.articleHashTagsCon}>
+                                    <Text> Hello World </Text>
+                                </View>
                             </View>
                         </ImageBackground>
                     </View>
@@ -118,9 +137,6 @@ const styles = StyleSheet.create({
         // justifyContent: "center",
         // flex: 1,
     },
-    menuCon: {
-
-    },
     iconImage: {
         maxWidth: 100,
     },
@@ -145,7 +161,15 @@ const styles = StyleSheet.create({
 
     imageBackground: {
         marginVertical: 50,
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30,
     },
+
+
+
+
+
+
     articleConOne: {
         marginHorizontal: 20,
     },
@@ -167,8 +191,54 @@ const styles = StyleSheet.create({
     //     maxWidth: 100,
     // },
     articleTextCon: {
-        backgroundColor: "red",
-        paddingVertical: 100,
+        backgroundColor: "white",
+        borderRadius: "#331A25",
+        borderWidth: 1,
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30,
+        paddingVertical: 30,
         marginTop: 100,
+        justifyContent: "space-evenly",
+        flexDirection: "column",
     },
-});
+    articleHeaderCon: {
+        backgroundColor: "green",
+        flex: 1,
+        marginVertical: 20,
+        marginRight: 100,
+        marginLeft: 20,
+        paddingHorizontal: 10,
+    },
+    articleTitleCon: {
+        backgroundColor: "blue",
+        marginVertical: 20,
+        marginHorizontal: 20,
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "row",
+    },
+    articleParagraphCon: {
+        backgroundColor: "purple",
+        marginVertical: 5,
+        marginHorizontal: 20,
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "row",
+    },
+    articleReviewCon: {
+        backgroundColor: "pink",
+        marginVertical: 20,
+        marginHorizontal: 20,
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "row",
+    },
+    articleHashTagsCon: {
+        backgroundColor: "yellow",
+        marginVertical: 10,
+        marginHorizontal: 20,
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "row",
+    },
+}); 

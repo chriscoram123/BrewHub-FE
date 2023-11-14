@@ -64,38 +64,93 @@ export default function LiquoresPage({ navigation: { navigate } }) {
 
                     <View style={styles.articleConOne}>
                         <ImageBackground  style={styles.imageBackground} source={require('../../assets/icon.png')}>
-
+                            
+                            {/* Article Container */}
                             <View style={styles.articleTextCon}>
-
+                                {/* Article Header */}
                                 <View style={styles.articleHeaderCon}>
-                                    <Text> Hello World </Text>
+                                    {/* Profile Icon */}
+                                    <View style={styles.articleProfileCon}>
+                                        <Image 
+                                            source={require('../../assets/icon.png')}
+                                            style={styles.profileImage}
+                                            // resizeMode='center'
+                                        />
+                                    </View>
+                                    {/* Article Info */}
+                                    <View style={styles.articleInfoCon}>
+                                        <Text> John Doe </Text>
+                                        <Text> 05/03/2022 </Text>
+                                    </View>
                                 </View>
 
+                                {/* Article Header */}
                                 <View style={styles.articleTitleCon}>
-                                    <Text> Hello World </Text>
+                                    <Text style={styles.articleText}>“The Best Recipes For The Best Drinking Experiences”</Text>
                                 </View>
 
+                                {/* Article Paragraph */}
                                 <View style={styles.articleParagraphCon}>
-                                    <Text> Hello World </Text>
+                                    <Text>Drinking with friends can be an enjoyable experience. But why not take it up a notch and add some flare to the fun! Below you’ll find enjoyable recipes, simple and easy, that the whole party will crave!  </Text>
                                 </View>
 
+                                {/* Article Paragraph */}
                                 <View style={styles.articleReviewCon}>
-                                    <Text> Hello World </Text>
+                                    <Text>One recipe that is absolutely amazing with a couple of shots of Don Julio </Text>
                                 </View>
 
-                                <View style={styles.articleHashTagsCon}>
-                                    <Text> Hello World </Text>
-                                </View>
+                                <ScrollView horizontal={true}>
+                                    <View style={styles.articleHashTagsCon}>
+                                        <Text>#NewRecipes  #Events  #Party  #HappyHour </Text>
+                                    </View>
+                                </ScrollView>
                             </View>
                         </ImageBackground>
                     </View>
 
 
                     <View style={styles.articleConOne}>
-                        <ImageBackground  style={styles.imageBackground} source={require('../../assets/icon.png')}>
-
+                    <ImageBackground  style={styles.imageBackground} source={require('../../assets/icon.png')}>
+                            
+                            {/* Article Container */}
                             <View style={styles.articleTextCon}>
-                                <Text> Hello World </Text>
+                                {/* Article Header */}
+                                <View style={styles.articleHeaderCon}>
+                                    {/* Profile Icon */}
+                                    <View style={styles.articleProfileCon}>
+                                        <Image 
+                                            source={require('../../assets/icon.png')}
+                                            style={styles.profileImage}
+                                            // resizeMode='center'
+                                        />
+                                    </View>
+                                    {/* Article Info */}
+                                    <View style={styles.articleInfoCon}>
+                                        <Text> John Doe </Text>
+                                        <Text> 05/03/2022 </Text>
+                                    </View>
+                                </View>
+
+                                {/* Article Header */}
+                                <View style={styles.articleTitleCon}>
+                                    <Text style={styles.articleText}>“The Best Recipes For The Best Drinking Experiences”</Text>
+                                </View>
+
+                                {/* Article Paragraph */}
+                                <View style={styles.articleParagraphCon}>
+                                    <Text>Drinking with friends can be an enjoyable experience. But why not take it up a notch and add some flare to the fun! Below you’ll find enjoyable recipes, simple and easy, that the whole party will crave!  </Text>
+                                </View>
+
+                                {/* Article Paragraph */}
+                                <View style={styles.articleReviewCon}>
+                                    <Text>One recipe that is absolutely amazing with a couple of shots of Don Julio </Text>
+                                </View>
+
+                                <ScrollView horizontal={true}>
+                                    <View style={styles.articleHashTagsCon}>
+                                        <Text>#NewRecipes  #Events  #Party  #HappyHour </Text>
+                                    </View>
+                                </ScrollView>
                             </View>
                         </ImageBackground>
                     </View>
@@ -149,6 +204,10 @@ const styles = StyleSheet.create({
         maxHeight: 20,
         marginBottom: 10,
     },
+    profileImage: {
+        maxHeight: 40,
+        maxWidth: 40,
+    },
     menuImage: {
         maxHeight: 30,
         maxWidth: 50,
@@ -171,6 +230,21 @@ const styles = StyleSheet.create({
 
     articleConOne: {
         marginHorizontal: 20,
+    },
+    articleProfileCon: {
+        maxHeight: 100,
+        // backgroundColor: "red",
+    },
+    articleInfoCon: {
+        // backgroundColor: "blue",
+    },
+    articleText: {
+        justifyContent: "center",
+        flexDirection: "row",
+    },
+    articleTextTwo: {
+        justifyContent: "center",
+        flexDirection: "row",
     },
     // articleConOne: {
     //     backgroundColor: "blue",
@@ -201,23 +275,25 @@ const styles = StyleSheet.create({
         flexDirection: "column",
     },
     articleHeaderCon: {
-        backgroundColor: "green",
+        // backgroundColor: "green",
         flex: 1,
-        marginVertical: 20,
         marginRight: 100,
         marginLeft: 20,
-        paddingHorizontal: 10,
+        // paddingHorizontal: 10,
+        // justifyContent: "space-evenly",
+        flexDirection: "row",
+        maxHeight: 40,
     },
     articleTitleCon: {
-        backgroundColor: "blue",
+        // backgroundColor: "blue",
         marginVertical: 20,
         marginHorizontal: 20,
-        display: "flex",
+        // display: "flex",
         justifyContent: "center",
-        flexDirection: "row",
+        // flexDirection: "column",
     },
     articleParagraphCon: {
-        backgroundColor: "purple",
+        // backgroundColor: "purple",
         marginVertical: 5,
         marginHorizontal: 20,
         display: "flex",
@@ -225,7 +301,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
     articleReviewCon: {
-        backgroundColor: "pink",
+        // backgroundColor: "pink",
         marginVertical: 20,
         marginHorizontal: 20,
         display: "flex",
@@ -233,7 +309,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
     articleHashTagsCon: {
-        backgroundColor: "yellow",
+        // backgroundColor: "yellow",
         marginVertical: 10,
         marginHorizontal: 20,
         display: "flex",

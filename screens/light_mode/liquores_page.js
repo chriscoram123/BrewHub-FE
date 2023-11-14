@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, Image, Animated, ImageBackground, Button, ScrollView } from 'react-native';
 import { useState } from 'react';
-import Hamburger from 'hamburger-react'
 
 export default function LiquoresPage({ navigation: { navigate } }) {
     

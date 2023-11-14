@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Animated, ImageBackground, Button, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, Animated, ImageBackground, Button, ScrollView, SafeAreaView } from 'react-native';
 import { useState } from 'react';
 
 export default function LiquoresPage({ navigation: { navigate } }) {
@@ -9,13 +9,12 @@ export default function LiquoresPage({ navigation: { navigate } }) {
     return (
         <View>
             <View style={styles.headerCon}>
-
                 {/* logo header container */}
                 <View style={styles.logoImgCon}> 
                     <Image 
-                        source={require('../../assets/icon.png')}
+                        source={require('../../assets/logo.png')}
                         style={styles.logoImage}
-                        resizeMode='center'
+                        // resizeMode='center'
                     />
                 </View>
                 
@@ -58,7 +57,7 @@ export default function LiquoresPage({ navigation: { navigate } }) {
                 </ScrollView>
             </View>
 
-
+            <SafeAreaView style={styles.container}>
             <View style={styles.articleViewCon}>
                 <ScrollView vertical={true}>
 
@@ -154,8 +153,11 @@ export default function LiquoresPage({ navigation: { navigate } }) {
                             </View>
                         </ImageBackground>
                     </View>
+
+                    <View style={styles.scrollViewFooter} />
                 </ScrollView>
             </View>
+            </SafeAreaView>
 
             <View style={styles.buttonCon}>
                 <Button title="BaseLiquores" color='black' onPress={() => navigate('BaseLiquores')} />
@@ -168,17 +170,24 @@ const styles = StyleSheet.create({
     headerCon: {
         flexDirection: "row",
         justifyContent: "space-between",
-        backgroundColor: "blue",
+        // backgroundColor: "blue",
         marginVertical: 10,
         paddingVertical: 20,
         paddingHorizontal: 30,
+    },
+    container: {
+        // flex: 1,
+    },
+    buttonCon: {
+        marginVertical: 100,
+        backgroundColor: "red",
     },
     scrollViewCon: {
         backgroundColor: "purple",
         paddingVertical: 80,
     },
     articleViewCon: {
-        marginVertical: 20,
+        maxHeight: "90%",
     },
     iconCon: {
         // paddingVertical:20,
@@ -195,8 +204,8 @@ const styles = StyleSheet.create({
         maxWidth: 100,
     },
     logoImage: {
-        maxHeight: 30,
-        maxWidth: 90,
+        maxHeight: 40,
+        maxWidth: "100%",
     },
     logoImgCon: {
         // flexDirection: "row",
@@ -221,6 +230,10 @@ const styles = StyleSheet.create({
         marginVertical: 50,
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
+    },
+    scrollViewFooter: {
+        backgroundColor: "red",
+        marginVertical: "50%",
     },
 
 
